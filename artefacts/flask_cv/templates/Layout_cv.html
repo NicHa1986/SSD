@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Your CV</title>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <style>
+        .table {
+          height: 30%;
+          width:500px;
+          table-layout:fixed;
+          border-collapse: collapse;
+
+        }
+
+        body {
+          height: 842px;
+          width: 595px;
+          /* to centre page on screen*/
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .split {
+          height: 100%;
+          width: 20%;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          overflow-x: hidden;
+          padding-top: 20px;
+        }
+
+        .split2 {
+          height: 80%;
+          width: 80%;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          overflow-x: hidden;
+          padding-top: 20px;
+        }
+
+        .left {
+          left: 0;
+          background-color: lightgrey !important;
+        }
+
+        /* Control the right side */
+        .right {
+          right: 0;
+          background-color: none;
+        }
+
+        .td {
+          display: table-cell;
+        }
+
+
+
+        </style>
+        <style media="print">
+         @page {
+          size: full;
+          margin: 0;
+          }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div>
+        <div class="split left">
+        <h3 style="padding-left: 30px;">{{personal[0]}}</h3>
+        <img src="https://ide-53cec3ba71e4421c9ba3858b9e6757de-8080.cs50.ws/res2" width="150" height="150" style="padding-left: 30px;"/>
+        <h2 style="font-size: 0.8em">
+        <div><p style="padding-left: 30px;overflow-wrap: break-word;">Address: {{personal[2]}}</p><br /><p style="padding-left: 30px;overflow-wrap: break-word;">Phone: {{personal[4]}}</p><br /><p style="padding-left: 30px;overflow-wrap: break-word;">Email: {{personal[3]}}</p><br /><p style="padding-left: 30px;overflow-wrap: break-word;">Nationality: {{personal[5]}}</p><br /><p style="padding-left: 30px;overflow-wrap: break-word;">Date of Birth: {{personal[6]}}</p><br /></div>
+        </h2>
+        <h4>
+        <span style="padding-left: 30px;border-bottom: 2px solid black; width: 100%">Professional Profil</span>
+        </h4>
+        <table>
+          <tr>
+            <td></td>
+            <td><p style="padding-left: 30px;overflow-wrap: break-word; font-size: 0.8em;padding-right: 20px;">{{personal[7]}}</p></td>
+          </tr>
+        </table></div>
+
+        <div class="split2 right">
+
+        <h3>
+        <span style="padding-left: 20px;border-bottom: 2px solid black; width: 100%;">Professional Experience</span>
+        </h3>
+        <table class="table" style="padding-left: 100px;">
+          {% for row in experience %}
+          <tr>
+            <td class="td"><div style="word-wrap: break-word; font-size: 0.8em;padding-left: 20px">{{row[0]}}<br/>{{row[1]}}</div></td>
+            <td class="td"><div style="word-wrap: break-word; font-size: 0.8em;padding-left: 20px">{{row[2]}}</div><br /><div style="word-wrap: break-word; font-size: 0.8em;padding-left: 20px;">{{row[3]}}</div></td>
+            <td class="td"><div style="word-wrap: break-word; font-size: 0.8em;padding-left: 20px">{{row[4]}}</div></td>
+            <p></p>
+          </tr>
+          {% endfor %}
+        </table>
+        <h3>
+        <span style="padding-left: 20px;border-bottom: 2px solid black; width: 100%">Education</span>
+        </h3>
+        <table class="table" style="padding-left: 100px;">
+          {% for row2 in education %}
+          <tr>
+            <td class="td"><div style="word-wrap: break-word; font-size: 0.8em;padding-left: 20px;">{{row2[0]}}<br/>{{row2[1]}}</div></td>
+            <td class="td"><div style="word-wrap: break-word; font-size: 0.8em;padding-left: 20px;">{{row2[2]}}</div><br /><div style="word-wrap: break-word; font-size: 0.8em;padding-left: 20px;">{{row2[3]}}</div><br/><div style="word-wrap: break-word; font-size: 0.8em;padding-left: 20px;">{{row2[4]}}</div></td>
+            <td class="td"><div style="word-wrap: break-word; font-size: 0.8em;padding-left: 20px;">{{row2[5]}}</div></td>
+            <p></p>
+          </tr>
+          {% endfor %}
+        </table>
+        <h3>
+        <span style="padding-left: 20px;border-bottom: 2px solid black; width: 100%">Skills</span>
+        </h3>
+        <table class = "table" style="padding-left: 100px;">
+          {% for row3 in skills %}
+          <tr>
+            <td><div style="word-wrap: break-word; font-size: 0.8em">{{row3[0]}}</div></td>
+            <p></p>
+          </tr>
+          {% endfor %}
+        </table>
+        </br>
+        <a href="https://ide-53cec3ba71e4421c9ba3858b9e6757de-8080.cs50.ws/userinput" ><button style="font-size: 1.5em;border: 2px solid black; background-color:white;color:lightgrey">Add or change your profile</button></a>
+        <a href="https://ide-53cec3ba71e4421c9ba3858b9e6757de-8080.cs50.ws/" ><button style="font-size: 1.5em;border: 2px solid black; background-color:white;color:lightgrey">Logout</button></a>
+
+        </div>
+        </div>
+    </body>
+</html>
+

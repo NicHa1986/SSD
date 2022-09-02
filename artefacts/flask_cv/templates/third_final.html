@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <script src="jquery-3.5.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>CV</title>
+
+
+        <script>
+
+            function chng()
+            {
+                var typ=document.getElementById("picture").value;
+                var res = typ.match(".jp");
+
+                if(res)
+                {
+                    alert("success");
+                }
+                else
+                {
+                    alert("Sorry, only jpeg images are accepted");
+                    document.getElementById("picture").value="";//clear the uploaded file
+                }
+            }
+
+        </script>
+
+    </head>
+    <body>
+
+    <a href="https://ide-53cec3ba71e4421c9ba3858b9e6757de-8080.cs50.ws/" ><button style="font-size: 1.5em;border: 2px solid black; background-color:white;color:lightgrey">Register</button></a>
+    <a href="https://ide-53cec3ba71e4421c9ba3858b9e6757de-8080.cs50.ws/login" ><button style="font-size: 1.5em;border: 2px solid black; background-color:white;color:lightgrey">Login</button></a>
+    <a href="https://ide-53cec3ba71e4421c9ba3858b9e6757de-8080.cs50.ws/logout" ><button style="font-size: 1.5em;border: 2px solid black; background-color:white;color:lightgrey">Logout</button></a>
+    <a href="https://ide-53cec3ba71e4421c9ba3858b9e6757de-8080.cs50.ws/userinput" ><button style="font-size: 1.5em;border: 2px solid black; background-color:white;color:lightgrey">Add or change your profile</button></a>
+    <a href="https://ide-53cec3ba71e4421c9ba3858b9e6757de-8080.cs50.ws/result" ><button style="font-size: 1.5em;border: 2px solid black; background-color:white;color:lightgrey">See your CV</button></a>
+            <div class="section form-group">
+                <h1 style="border-bottom: 2px solid black; width: 50%; color:grey">Part 5: Photo</h1>
+                <hr>
+
+                <!-- TODO: Add multiple choice question here -->
+                <h2 style="font-size:1.2em">Please add a photo.</h2>
+                <hr>
+                <form action="/photo" method="post" enctype="multipart/form-data">
+                <div class="form-group" style="width: 10%">
+                <input id="picture" name="picture" type="file" onchange="chng()"></div>
+                <div class="form-group" style="width: 10%">
+                <b><input type="submit"></div></b>
+                </form>
+            </div>
+
+    </body>
+</html>

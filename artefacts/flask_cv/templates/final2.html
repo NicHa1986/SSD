@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <script src="jquery-3.5.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>CV</title>
+
+        <script type="text/javascript">
+            i=0;
+            function addtag() {
+                var p = document.createElement("P");
+                let ul = document.getElementsByTagName('form')[0];
+                var a = document.createElement("INPUT");
+
+                a.setAttribute("type", "date");
+                a.setAttribute("id", "s" + String(i));
+                a.setAttribute("name", "s" + String(i));
+                a.setAttribute("placeholder", "Starting date");
+                ul.appendChild(a);
+
+                ul.insertBefore(a,document.getElementById("educ"));
+
+                var b = document.createElement("INPUT");
+                b.setAttribute("type", "date");
+                b.setAttribute("id", "e" + String(i));
+                b.setAttribute("name", "e" + String(i));
+                b.setAttribute("placeholder", "End date");
+                ul.appendChild(b);
+
+                ul.insertBefore(b,document.getElementById("educ"));
+
+                var c = document.createElement("INPUT");
+                c.setAttribute("type", "text");
+                c.setAttribute("id", "c" + String(i));
+                c.setAttribute("name", "c" + String(i));
+                c.setAttribute("placeholder", "Company/Employer");
+                ul.appendChild(c);
+
+                ul.insertBefore(c,document.getElementById("educ"));
+
+                var d = document.createElement("INPUT");
+                d.setAttribute("type", "text");
+                d.setAttribute("id", "d" + String(i));
+                d.setAttribute("name", "d" + String(i));
+                d.setAttribute("placeholder", "Describe your position");
+                ul.appendChild(d);
+
+                ul.insertBefore(d,document.getElementById("educ"));
+
+                var e = document.createElement("INPUT");
+                e.setAttribute("type", "text");
+                e.setAttribute("id", "p_expe" + String(i));
+                e.setAttribute("name", "p_expe" + String(i));
+                e.setAttribute("placeholder", "Countrycode and city of workplace");
+                ul.appendChild(e);
+
+                ul.insertBefore(e,document.getElementById("educ"));
+
+                ul.insertBefore(p,document.getElementById("educ"));
+
+                i += 1;
+
+            }
+
+            j=0;
+            function addtag2() {
+                var p = document.createElement("P");
+                let ul = document.getElementsByTagName('form')[0];
+                var a = document.createElement("INPUT");
+
+                a.setAttribute("type", "date");
+                a.setAttribute("id", "s_educ" + String(j));
+                a.setAttribute("name", "s_educ" + String(j));
+                a.setAttribute("placeholder", "Starting date");
+                ul.appendChild(a);
+
+                ul.insertBefore(a,document.getElementById("expe"));
+
+                var b = document.createElement("INPUT");
+                b.setAttribute("type", "date");
+                b.setAttribute("id", "e_educ" + String(j));
+                b.setAttribute("name", "e_educ" + String(j));
+                b.setAttribute("placeholder", "End date");
+                ul.appendChild(b);
+
+                ul.insertBefore(b,document.getElementById("expe"));
+
+                var c = document.createElement("INPUT");
+                c.setAttribute("type", "text");
+                c.setAttribute("id", "i" + String(j));
+                c.setAttribute("name", "i" + String(j));
+                c.setAttribute("placeholder", "Institution");
+                ul.appendChild(c);
+
+                ul.insertBefore(c,document.getElementById("expe"));
+
+                var d = document.createElement("INPUT");
+                d.setAttribute("type", "text");
+                d.setAttribute("id", "study" + String(j));
+                d.setAttribute("name", "study" + String(j));
+                d.setAttribute("placeholder", "Name of your study");
+                ul.appendChild(d);
+
+                ul.insertBefore(d,document.getElementById("expe"));
+
+                var e = document.createElement("INPUT");
+                e.setAttribute("type", "text");
+                e.setAttribute("id", "l" + String(j));
+                e.setAttribute("name", "l" + String(j));
+                e.setAttribute("placeholder", "Level of diploma (Bachelor, Master or etc.");
+                ul.appendChild(e);
+
+                ul.insertBefore(e,document.getElementById("expe"));
+
+                var f = document.createElement("INPUT");
+                f.setAttribute("type", "text");
+                f.setAttribute("id", "p_educ" + String(j));
+                f.setAttribute("name", "p_educ" + String(j));
+                f.setAttribute("placeholder", "Countrycode and city of institution");
+                ul.appendChild(f);
+
+                ul.insertBefore(f,document.getElementById("expe"));
+
+                ul.insertBefore(p,document.getElementById("expe"));
+
+                j += 1;
+
+            }
+
+            k=0;
+            function addtag3() {
+                var p = document.createElement("P");
+                let ul = document.getElementsByTagName('form')[0];
+                var a = document.createElement("INPUT");
+
+                var c = document.createElement("INPUT");
+                c.setAttribute("type", "text");
+                c.setAttribute("id", "skills" + String(k));
+                c.setAttribute("name", "skills" + String(k));
+                c.setAttribute("placeholder", "Skills");
+                ul.appendChild(c);
+
+                ul.insertBefore(c,document.getElementById("replace"));
+
+                ul.insertBefore(p,document.getElementById("replace"));
+
+                k += 1;
+
+            }
+
+        </script>
+
+    </head>
+    <body>
+            <a href="https://ide-53cec3ba71e4421c9ba3858b9e6757de-8080.cs50.ws/" ><button style="font-size: 1.5em;border: 2px solid black; background-color:white;color:lightgrey">Register</button></a>
+            <a href="https://ide-53cec3ba71e4421c9ba3858b9e6757de-8080.cs50.ws/login" ><button style="font-size: 1.5em;border: 2px solid black; background-color:white;color:lightgrey">Login</button></a>
+            <a href="https://ide-53cec3ba71e4421c9ba3858b9e6757de-8080.cs50.ws/logout" ><button style="font-size: 1.5em;border: 2px solid black; background-color:white;color:lightgrey">Logout</button></a>
+            <a href="https://ide-53cec3ba71e4421c9ba3858b9e6757de-8080.cs50.ws/photo" ><button style="font-size: 1.5em;border: 2px solid black; background-color:white;color:lightgrey">Add a photo</button></a>
+            <a href="https://ide-53cec3ba71e4421c9ba3858b9e6757de-8080.cs50.ws/result" ><button style="font-size: 1.5em;border: 2px solid black; background-color:white;color:lightgrey">See your CV</button></a>
+
+            <div class="section form-group">
+                <h1 style="border-bottom: 2px solid black; width: 50%; color:grey">Part 1: Personal Data </h1>
+                <hr>
+
+                <!-- Add multiple choice question here -->
+                <h2 style="font-size:1.2em">Please fill in your personal data.</h2>
+                <hr>
+                <form action="/userinput" method="post" id="sub" name="sub">
+                <input id="name" autofocus name="name" placeholder="Firstname, Lastname" type="text"/>
+                <input id="address" name="address" placeholder="Address" type="text"/>
+                <input id="email" name="email" placeholder="Email" type="text"/>
+                <input id="phone" name="phone" placeholder="Phone" type="text"/>
+                <input id="nationality" name="nationality" placeholder="Nationality" type="text"/>
+                <input id="date_of_birth" name="date_of_birth" placeholder="Date of Birth" type="date">
+                <input id="professional" name="professional" placeholder="Professional Profile" type="text"/>
+                <input type="submit" value="Save" id="submit"/>
+                <h1 style="border-bottom: 2px solid black; width: 50%; color:grey">Part 2: Experience </h1>
+                <hr>
+
+                <!-- TODO: Add multiple choice question here -->
+                <h2 style="font-size:1.2em">Please fill in your experience.</h2>
+                <hr>
+
+                <input type="button" id="exp" name="exp" value="Add a line" onclick="addtag()"/>
+                <p style="font-size:0.8em">Don't worry about blank lines. They will not be counted.</p>
+                <p id="educ"></p>
+                <input type="submit" value="Save" id="submit"/>
+
+                <h1 name="educ" id="educ" style="border-bottom: 2px solid black; width: 50%; color:grey">Part 3: Education </h1>
+                <hr>
+
+                <!-- TODO: Add multiple choice question here -->
+                <h2 style="font-size:1.2em">Please fill in your educational profile.</h2>
+                <hr>
+
+                <input type="button" id="exp2" name="exp2" value="Add a line" onclick="addtag2()"/>
+                <p style="font-size:0.8em">Don't worry about blank lines. They will not be counted.</p>
+                <p id="expe"></p>
+                <input type="submit" value="Save" id="submit"/>
+
+                <h1 name="expe" id="expe" style="border-bottom: 2px solid black; width: 50%; color:grey">Part 4: Skills </h1>
+                <hr>
+
+                <h2 style="font-size:1.2em">Please fill in your skills.</h2>
+                <hr>
+
+                <input type="button" id="exp2" name="exp2" value="Add a line" onclick="addtag3()"/>
+                <p style="font-size:0.8em">Don't worry about blank lines. They will not be counted.</p>
+                <p></p>
+                <p id="replace"></p>
+                <b><input type="submit" value="Save" id="submit"/></b>
+                </form>
+            </div>
+
+    </body>
+</html>

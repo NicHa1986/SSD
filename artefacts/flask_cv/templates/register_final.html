@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <script src="jquery-3.5.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>CV</title>
+    </head>
+    <body>
+    <a href="https://ide-53cec3ba71e4421c9ba3858b9e6757de-8080.cs50.ws/login" ><button style="font-size: 1.5em;border: 2px solid black; background-color:white;color:lightgrey">Login</button></a>
+    <a href="https://ide-53cec3ba71e4421c9ba3858b9e6757de-8080.cs50.ws/logout" ><button style="font-size: 1.5em;border: 2px solid black; background-color:white;color:lightgrey">Logout</button></a>
+    <a href="https://ide-53cec3ba71e4421c9ba3858b9e6757de-8080.cs50.ws/userinput" ><button style="font-size: 1.5em;border: 2px solid black; background-color:white;color:lightgrey">Add or change your profile</button></a>
+    <a href="https://ide-53cec3ba71e4421c9ba3858b9e6757de-8080.cs50.ws/photo" ><button style="font-size: 1.5em;border: 2px solid black; background-color:white;color:lightgrey">Add a photo</button></a>
+    <a href="https://ide-53cec3ba71e4421c9ba3858b9e6757de-8080.cs50.ws/result" ><button style="font-size: 1.5em;border: 2px solid black; background-color:white;color:lightgrey">See your CV</button></a>
+    <p></p>
+    <p>Dear visitor, </br> This application allows you to create a quick CV presented in classic layout. Please start to register yourself and then add a first profile. </br>Once you are registered and already added a profile, you are always allowed to change your profile in simply using your login data and then changing the desired part. </br>Your profile will be saved 12 months. With your registration you also agree on the condition that we can save your profile in our database. Though, your profile will not be shared with third parties. </br> Good Luck, </br> The Team</p>
+    <form action="/" method="post">
+        <div class="form-group" style="width: 10%">
+            <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="form-group" style="width: 10%">
+            <input class="form-control" name="password" placeholder="Password" type="password">
+        </div>
+        <div class="form-group" style="width: 10%">
+            <input class="form-control" name="confirmation" placeholder="Repeat Password" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Register</button>
+        <button class="btn btn-primary" type="submit" id="already_registered">Already registered</button>
+    </form>
+    </body>
+</html>
